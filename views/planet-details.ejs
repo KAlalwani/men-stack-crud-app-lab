@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Planet Details</h1>
+
+    <p>Name: <%= planet.name %></p>
+
+    <% if(planet.inSolarSystem){ %>
+        <p>In the Solar System!</p>
+    <% }else{ %>
+        <p>Not in the Solar System! :(</p>
+    <% } %>
+
+    <form action="/planets/<%= planet._id %>/?_method=DELETE" method="post">
+        <button>Delete Planet</button>
+   </form>
+    <a href="/planets/<%= planet._id %>/edit"> Edit Planet</a>
+    
+
+
+</body>
+</html>

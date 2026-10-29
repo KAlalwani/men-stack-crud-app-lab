@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+    <h1>All Planets</h1>
+    
+    <% if(planets.length === 0) { %>
+        <p>No Planets to show yet. Come Back Later</p>
+        <a href="/planets/new">Create Your own Planet here</a>
+    <% } %>
+
+    <% for(let onePlanet of planets){ %>
+        <p>Name: <%= onePlanet.name%></p>
+        <a href="/planets/<%= onePlanet._id%>">See Planet Details</a>
+    <% } %>
+    
+</body>
+</html>

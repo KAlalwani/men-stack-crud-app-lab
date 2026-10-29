@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Planet</h1>
+     <form action="/planets/<%= planet._id %>?_method=PUT" method="post">
+        <label for="name">Name:</label>
+        <input value="<%= planet.name %>" name="name" id="name" type="text">
+
+        <label for="inSolarSystem">In Solar System?</label>
+        <input <% if(planet.inSolarSystem){%>
+            checked
+        <%}%>
+        name="inSolarSystem" id="inSolarSystem" type="checkbox">
+
+        <button>Update Planet</button>
+    </form>
+
+
+
+</body>
+</html>

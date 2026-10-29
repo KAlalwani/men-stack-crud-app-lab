@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+
+    <h1>Create new Planet</h1>
+
+    <form action="/planets" method="post">
+        <label for="name">Name:</label>
+        <input name="name" id="name" type="text">
+
+        <label for="inSolarSystem">In Solar System?</label>
+        <input name="inSolarSystem" id="inSolarSystem" type="checkbox">
+
+        <button>Create Planet</button>
+    </form>
+
+
+</body>
+</html>
